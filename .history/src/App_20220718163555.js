@@ -2,15 +2,15 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Menu from "./Components/Menu";
-import Todos from "./Components/Todos";
-import Data from "./Components/Data";
+
 const App = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Menu />}></Route>
-                <Route path="/Todolist" element={<Todos />}></Route>
-                <Route path="/Data" element={<Data />}></Route>
+                <Route path="/" element={<Menu />}>
+                    <Route index element={<TodoList />} />
+                    <Route path="teams" element={<Data />}></Route>
+                </Route>
             </Routes>
         </BrowserRouter>
         // <div className="container">

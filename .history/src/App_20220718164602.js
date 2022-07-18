@@ -3,7 +3,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Menu from "./Components/Menu";
 import Todos from "./Components/Todos";
-import Data from "./Components/Data";
+import Data from "./Components/data";
 const App = () => {
     return (
         <BrowserRouter>

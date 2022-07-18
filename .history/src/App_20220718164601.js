@@ -3,7 +3,6 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Menu from "./Components/Menu";
 import Todos from "./Components/Todos";
-import Data from "./Components/Data";
 const App = () => {
     return (
         <BrowserRouter>
@@ -11,6 +10,7 @@ const App = () => {
                 <Route path="/" element={<Menu />}></Route>
                 <Route path="/Todolist" element={<Todos />}></Route>
                 <Route path="/Data" element={<Data />}></Route>
+                
             </Routes>
         </BrowserRouter>
         // <div className="container">

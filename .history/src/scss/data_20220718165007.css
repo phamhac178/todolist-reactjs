@@ -1,0 +1,32 @@
+.App {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+span {
+    font-weight: 400;
+}
+
+input {
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #61dafb;
+    outline: none;
+}
+
+.submit {
+    background-color: green;
+    color: azure;
+    outline: none;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.submit:hover {
+    opacity: 0.7;
+}
+
+/*# sourceMappingURL=data.css.map */

@@ -1,16 +1,28 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
+import Form from "./Components/Form";
+import Header from "./Components/Header";
+import TodoList from "./Components/TodoList";
+import Data from "./Components/Data";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Menu from "./Components/Menu";
-import Todos from "./Components/Todos";
-import Data from "./Components/Data";
 const App = () => {
+    const initalState = JSON.parse(localStorage.getItem("todos")) || [];
+    const [input, setInput] = useState("");
+    const [todos, setTodos] = useState(initalState);
+    const [editTodo, setEditTodo] = useState(null);
+
+    useEffect(() => {
+        localStorage.setItem("todos", JSON.stringify(todos));
+    }, [todos]);
+
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Menu />}></Route>
-                <Route path="/Todolist" element={<Todos />}></Route>
-                <Route path="/Data" element={<Data />}></Route>
+                <Route path="/" element={<Menu />}>
+                    <Route index element={<TodoList />} />
+                    <Route path="teams" element={<Data />}></Route>
+                </Route>
             </Routes>
         </BrowserRouter>
         // <div className="container">

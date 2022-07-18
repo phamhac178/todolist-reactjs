@@ -1,19 +1,8 @@
-import React, { useEffect, useState } from "react";
-import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Menu from "./Components/Menu";
-import Todos from "./Components/Todos";
-import Data from "./Components/Data";
-const App = () => {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Menu />}></Route>
-                <Route path="/Todolist" element={<Todos />}></Route>
-                <Route path="/Data" element={<Data />}></Route>
-            </Routes>
-        </BrowserRouter>
-        // <div className="container">
+import React from 'react'
+
+const Todos = () => {
+  return (
+     // <div className="container">
         //     <div className="app-wrapper">
         //         <div>
         //             <Data />
@@ -38,7 +27,7 @@ const App = () => {
         //         </div>
         //     </div>
         // </div>
-    );
-};
+  )
+}
 
-export default App;
+export default Todos
