@@ -52,7 +52,7 @@ const Data = () => {
 
     return (
         <div className="App">
-            <a href="/">back</a>
+            <a href=""></a>
             <h1>Form Get Info User</h1>
             <form style={{ marginTop: "10px" }} onSubmit={handleSubmit}>
                 <div>
